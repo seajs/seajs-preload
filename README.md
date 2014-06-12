@@ -1,14 +1,14 @@
 seajs-circular
 =========
 
-A Sea.js plugin for circular dependency
+A Sea.js plugin for preload
 
 Install
 -------
 
 Install with spm:
 
-    $ spm install seajs/seajs-circular
+    $ spm install seajs/seajs-preload
 
 
 Usage
@@ -16,12 +16,15 @@ Usage
 
 ```html
 <script src="path/to/sea.js"></script>
-<script src="path/to/seajs-circular.js"></script>
+<script src="path/to/seajs-preload.js"></script>
 
 <script>
 
-// seajs can load circular dependency module after loading circular plugin.
-seajs.use("path/to/circular-mod")
+seajs.config({
+  preload: 'jquery'
+})
+
+seajs.use("path/to/mod")
 
 </script>
 ```
@@ -30,6 +33,3 @@ Note
 -----
 
 This plugin bases on seajs ^2.3.0
-<br/>When a circular dependency occurs, the program will function well as well as warning a message in console.
-
-seajs 3.0.0 will native support circular dependency without this plugin.
