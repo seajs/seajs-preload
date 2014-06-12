@@ -21,7 +21,7 @@ Usage
 <script>
 
 seajs.config({
-  preload: 'jquery'
+  preload: ['jquery']
 })
 
 seajs.use("path/to/mod")
