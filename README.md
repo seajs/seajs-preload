@@ -1,4 +1,4 @@
-seajs-circular
+seajs-preload
 =========
 
 A Sea.js plugin for preload
